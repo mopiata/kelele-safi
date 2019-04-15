@@ -1,0 +1,34 @@
+html, body{
+  height:100%;
+}
+.jumbotron{
+  background-color: #ffcb0c;
+}
+.site-purpose{
+  background-color: #ffcb0c;
+  color:white;
+}
+.site-purpose h1{
+  float:left;
+}
+.site-purpose span{
+  float: right;
+}
+.site-purpose ul{
+  clear: both;
+}
+.site-purpose ul {
+  list-style-type: none;
+}
+.login{
+  display: none;
+}
+.landing{
+  height: 100%;
+}
+.login-signup{
+  text-align: center;
+}
+.btn-signup{
+  display: none;
+}

@@ -1,5 +1,8 @@
 html, body{
   height:100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #0c4e7b;
 }
 .jumbotron{
   background-color: transparent;
@@ -15,12 +18,14 @@ html, body{
 .navbar{
   background-color: #ffcb0c;
 }
+.nav-login{
+  float:left;
+}
 .site-purpose h1{
   float:left;
 }
-.btn-login, .btn-signup{
-  float: right;
-}
+
+
 #purpose-list{
   clear: both;
   line-height: 60px;
@@ -33,11 +38,13 @@ html, body{
 .login{
   display: none;
 }
+
 .landing{
   height: 100%;
 }
 .login-signup{
   text-align: center;
+  padding-right:25px;
 }
 .btn-signup{
   display: none;

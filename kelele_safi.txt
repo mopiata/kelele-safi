@@ -1,0 +1,7 @@
+https://colorlib.com/wp/free-bootstrap-registration-forms/
+
+
+
+gapi.load('auth2', function() {
+gapi.auth2.init();
+});

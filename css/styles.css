@@ -2,20 +2,27 @@ html, body{
   height:100%;
 }
 .jumbotron{
-  background-color: #ffcb0c;
+  background-color: transparent;
 }
+
 .site-purpose{
   background-color: #ffcb0c;
   color:white;
 }
+.navbar-brand{
+  font-size: 50px;
+}
 .site-purpose h1{
   float:left;
 }
-.site-purpose span{
+.btn-login, .btn-signup{
   float: right;
 }
-.site-purpose ul{
+#purpose-list{
   clear: both;
+  line-height: 60px;
+  text-align: center;
+  font-size: 25px;
 }
 .site-purpose ul {
   list-style-type: none;

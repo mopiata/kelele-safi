@@ -16,13 +16,18 @@
   <div class="row landing">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 site-purpose">
       <div class="jumbotron">
-        <h1>keLeLe Safi</h1>
-        <span class="btn btn-info btn-login">Login</span>
-        <span class="btn btn-info btn-signup">Sign Up</span>
-        <ul>
-          <li><strong>Share your feedback</strong></li>
-          <li><strong>Hear what people are saying</strong></li>
-          <li><strong>Be part of the talk</strong></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+          <a class="navbar-brand" href="#">KELELE SAFI</a>
+          
+          <span class="btn btn-info btn-login">Login</span>
+          <span class="btn btn-info btn-signup">Sign Up</span>
+
+        </nav>
+        <br><br>
+        <ul id="purpose-list">
+          <li>Share your feedback</li>
+          <li>Hear what people are saying</li>
+          <li>Be part of the talk</li>
         </ul>
       </div>
     </div>
@@ -60,15 +65,30 @@
             </label>
           </div>
           <br><br>
-          <button type="submit" class="btn btn-info" id="add-account">Create Account</button>
+          <button type="submit" class="btn btn-info" id="create-account">Create Account</button>
         </form>
       </div>
-      
-      <p>or</p>
-      <button class="btn btn-danger">Create account with Google</button>
+
       <div class="login">
-        
+        <h1>Sign in to Your Account</h1>
+        <form id="login">
+          <div class="form-group">
+            <label for="email-login">Email</label>
+            <input type="date" class="form-control" id="email-login">
+          </div>
+          <div class="form-group">
+            <label for="password-login">Password</label>
+            <input type="password" class="form-control" id="password-login">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-info" id="btn-sign-in">Sign In</button>
+        </form>
       </div>
+
+      <br><br>
+
+      <button class="btn btn-danger google-signin">Sign in with Google</button>
+      
     </div>
   </div>
 </body>

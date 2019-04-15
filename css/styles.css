@@ -12,6 +12,9 @@ html, body{
 .navbar-brand{
   font-size: 50px;
 }
+.navbar{
+  background-color: #ffcb0c;
+}
 .site-purpose h1{
   float:left;
 }
@@ -38,4 +41,8 @@ html, body{
 }
 .btn-signup{
   display: none;
+}
+.cols{
+  border:solid 1px #ffcb0c;
+  
 }

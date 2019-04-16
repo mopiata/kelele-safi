@@ -1,4 +1,9 @@
 <?php include("includes/header.php")?>
+		<?php 
+		validate_user_registration();
+		?>
+
+								
 <div class="row landing">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 site-purpose">
       <div class="jumbotron">
@@ -17,30 +22,34 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 login-signup">
       
       <div class="signup">
-        <h1>Create Your Account</h1>
-        <form id="signup">
+	  
+    	    <h1>Create Your Account</h1>
+        <form id="signup" method="post" role="form">
           <div class="form-group">
-            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+            <input type="text" name="first_name" class="form-control" id="firs_tname" placeholder="First Name">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="surname" placeholder="Surame">
+            <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname">
+		  </div>
+		  <div class="form-group">
+            <input type="text" name="username" class="form-control" id="username" placeholder="Username">
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+            <input type="password" name="password" class="form-control" id="newPassword" placeholder="New Password">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm Password">
           </div>
           <div class="form-group">
             <label for="name">Birth Date</label>
-            <input type="date" class="form-control" id="dob">
+            <input type="date" name="DOB" class="form-control" id="dob">
           </div>
-          <select class="custom-select custom-select-sm mb-3">
+          <select name="GENDER" class="custom-select custom-select-sm mb-3">
             <option selected>Choose your gender</option>
-            <option value="female">Female</option>
+            <option value="female">Female </option>
             <option value="male">Male</option>
           </select>
           <br><br>

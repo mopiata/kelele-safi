@@ -3,7 +3,7 @@ $con = mysqli_connect('localhost','root','','login_db');
 
 function row_count($result){
 
-    return mysqli_num_row($result);
+    return mysqli_num_rows($result);
 }
 
 function escape($string){
@@ -22,7 +22,7 @@ function query($query){
 function confirm($result){
     global $con;
     if(!$result){
-        die("Query failed".mysql_error($con));
+        die("Query failed ".mysqli_error($con));
     }
 
 }

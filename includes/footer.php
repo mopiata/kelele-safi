@@ -1,5 +1,3 @@
-</div> <!--Container-->
-
-	
+</div> 	
 </body>
 </html>

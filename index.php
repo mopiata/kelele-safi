@@ -1,7 +1,5 @@
 <?php include("includes/header.php")?>
-		<?php 
-		validate_user_registration();
-		?>
+		
 
 								
 <div class="row landing">
@@ -22,15 +20,15 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 login-signup">
       
       <div class="signup">
-	  
+      
     	    <h1>Create Your Account</h1>
-        <form id="signup" method="post" role="form">
+        <form id="signup" method="post" role="form" action="register.php">
           <div class="form-group">
             <input type="text" name="first_name" class="form-control" id="firs_tname" placeholder="First Name">
           </div>
           <div class="form-group">
             <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname">
-		  </div>
+		  </div> 
 		  <div class="form-group">
             <input type="text" name="username" class="form-control" id="username" placeholder="Username">
           </div>
@@ -55,18 +53,19 @@
           <br><br>
           <button type="submit" class="btn btn-info" id="create-account">Create Account</button>
         </form>
-      </div>
+      </div> 
 
       <div class="login">
         <h1>Sign in to Your Account</h1>
-        <form id="login">
+        <form id="login" action="login.php" method="post">
           <div class="form-group">
             <label for="email-login">Email</label>
-            <input type="email" class="form-control" id="email-login">
+            
+            <input type="email" name="email" class="form-control" id="email-login">
           </div>
           <div class="form-group">
             <label for="password-login">Password</label>
-            <input type="password" class="form-control" id="password-login">
+            <input type="password" name="password" class="form-control" id="password-login">
           </div>
           <br>
           <button type="submit" class="btn btn-info" id="btn-sign-in">Sign In</button>
@@ -77,7 +76,8 @@
 
       <button class="btn btn-danger google-signin">Sign in with Google</button>
       <span> <strong>or</strong> </span>
-      <button class="btn btn-info btn-login">Login</button>
+      <button class="btn btn-info btn-login btn-login-show" id="btn-login-show">Login</button> 
+      <!-- <a href="index_login.php" class="btn btn-primary">Login</a> -->
       <button class="btn btn-info btn-signup">Sign Up</button>
       
     </div>  

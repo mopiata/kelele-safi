@@ -52,7 +52,7 @@ function username_exists($username){
     }
 }
 
-/*****function validation******/
+/*****function validate user input******/
 function validate_user_registration(){
 
     $errors = [];
@@ -108,8 +108,9 @@ function validate_user_registration(){
         
     }
 }
+/*****Function Post  register user******/
 
-// Post requests register user
+
 function register_user($first_name,$surname,$username,$email,$password){
     $first_name    =   escape($first_name);
     $surname       =   escape($surname);
@@ -124,7 +125,7 @@ function register_user($first_name,$surname,$username,$email,$password){
     }
     else {
         $password = md5($password);
-        $validation_code = md5($username + microtime());
+        $validation_code .= md5($username + microtime());
         $GENDER = "";
         $sql = "INSERT INTO users".
          "(first_name, surname, email,password,GENDER, username, validation_code,active)".
@@ -132,8 +133,97 @@ function register_user($first_name,$surname,$username,$email,$password){
         $result = query($sql);
 
         confirm($result);
+
+        $subject = "Activate Account";
+        $msg = "Please click below to activate your account.
+        http://localhost/login/activate.php?email=$email&code=$validation_code";
+
+        $header = "From: noreply@youtwebsite.com";
+        //send_email($email,$subject,$msg,$header);
+
         return true;
     }
+
 }
+/*****Function activate user******/
+
+function activate_user(){
+    if($_SERVER['REQUEST_METHOD'] == "GET"){
+        if(isset($_GET['email'])){
+             $email = clean($_GET['email']);
+             $validation_code = clean($_GET['code']);
+             $sql = "SELECT id from users where email = '".escape($_GET['email'])."' AND validation_code = '".escape($_GET['code'])."'";
+             $result = query($sql);
+             confirm($result);
+
+             if(row_count($result) == 1){
+            
+             $sql2 = "UPDATE users SET active = 1, validation_code = 0 WHERE email='".escape($email)."' AND validation_code = '".escape($validation_code)."' ";
+             $result2 = query($sql2);
+             confirm($result2);
+             echo "<p>Your Account is now activated, please login</p>";
+             redirect("index.php");
+            }
+        }
+    }
+
+}
+/*****Validate user login   user******/
+
+function validate_user() {
+  
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+    $email           = clean($_POST['email']);
+    $password        = clean($_POST['password']);
+
+    if(empty($email)){
+        $error[] = "Email Field cannot be empty";
+    }
+    if(empty($password)){
+        $error[] = "Password Field cannot be empty";
+    }
+    if(!empty($errors)){
+        foreach ($errors as $error){
+            echo $error;
+        }
+    }else {
+
+        login_user($email,$password);
+
+}
+    }
+}
+/*****Function login   user******/
+
+
+function login_user($email,$password){
+
+
+//     // $password      =   escape($password);
+ $sql = "select password,id from users where email = '".escape($email)."'";
+ $result = query($sql);
+ confirm($result);
+
+
+if(row_count($result) == 1){
+
+$row = fetch_array($result);
+  $db_password = $row['password'];
+    if(md5($password) == $db_password){
+        // return true;
+     redirect("recover.php");
+        // echo $email;
+        // echo $password;
+
+
+    } else { 
+        return false;
+    }
+    return true;
+
+}
+}
+
 
 ?>

@@ -1,4 +1,4 @@
- <?php include("functions/init.php")?> 
+<?php include("functions/init.php")?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +11,6 @@
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/underscore.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Kelele Safi - Log In or Sign Up</title>
+  <title>Kelele Safi</title>
 </head>
 <body>

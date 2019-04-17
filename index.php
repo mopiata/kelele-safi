@@ -20,7 +20,8 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 login-signup">
       
       <div class="signup">
-      
+          <?php dispay_message() ?>
+
     	    <h1>Create Your Account</h1>
         <form id="signup" method="post" role="form" action="register.php">
           <div class="form-group">
@@ -54,14 +55,13 @@
           <button type="submit" class="btn btn-info" id="create-account">Create Account</button>
         </form>
       </div> 
-
       <div class="login">
         <h1>Sign in to Your Account</h1>
         <form id="login" action="login.php" method="post">
           <div class="form-group">
-            <label for="email-login">Email</label>
+            <label for="email-login">Username</label>
             
-            <input type="email" name="email" class="form-control" id="email-login">
+            <input type="text" name="username" class="form-control" id="email-login">
           </div>
           <div class="form-group">
             <label for="password-login">Password</label>
@@ -72,7 +72,7 @@
         </form>
       </div>
 
-      <br><br>
+      <br>
 
       <button class="btn btn-danger google-signin">Sign in with Google</button>
       <span> <strong>or</strong> </span>

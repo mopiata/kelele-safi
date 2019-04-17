@@ -19,6 +19,12 @@ function set_message($message){
 
 }
 
+// function dispay_username(){
+//     $s_username = $_SESSION;
+
+//     echo $s_username;
+// }
+
 function dispay_message(){
     if(isset($_SESSION['message'])){
         echo $_SESSION['message'];
@@ -102,7 +108,10 @@ function validate_user_registration(){
             }
         }else {
             if(register_user($first_name,$surname,$username,$email,$password)){
-                echo "User registered";
+                set_message("<p class='bg-success text-center'>You have succesfully been registered. Click Log in.</p>");
+
+                redirect("index.php");
+
             }
         }
         
@@ -125,7 +134,7 @@ function register_user($first_name,$surname,$username,$email,$password){
     }
     else {
         $password = md5($password);
-        $validation_code .= md5($username + microtime());
+        $validation_code = md5(microtime());
         $GENDER = "";
         $sql = "INSERT INTO users".
          "(first_name, surname, email,password,GENDER, username, validation_code,active)".
@@ -174,7 +183,7 @@ function validate_user() {
   
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-    $email           = clean($_POST['email']);
+    $username           = clean($_POST['username']);
     $password        = clean($_POST['password']);
 
     if(empty($email)){
@@ -189,7 +198,7 @@ function validate_user() {
         }
     }else {
 
-        login_user($email,$password);
+        login_user($username,$password);
 
 }
     }
@@ -197,11 +206,11 @@ function validate_user() {
 /*****Function login   user******/
 
 
-function login_user($email,$password){
+function login_user($username,$password){
 
 
 //     // $password      =   escape($password);
- $sql = "select password,id from users where email = '".escape($email)."'";
+ $sql = "select password,id from users where username = '".escape($username)."'";
  $result = query($sql);
  confirm($result);
 
@@ -212,7 +221,8 @@ $row = fetch_array($result);
   $db_password = $row['password'];
     if(md5($password) == $db_password){
         // return true;
-     redirect("post_details.php");
+        set_message($username);
+    redirect("post_details.php");
         // echo $email;
         // echo $password;
 

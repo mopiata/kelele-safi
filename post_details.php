@@ -30,9 +30,10 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a href="logout.php" class="btn btn-primary">Logout</a>
+        <!-- <a href="logout.php" class="btn btn-primary">Logout</a> -->
 
-          <!-- <a class="nav-link" href="#">Logout</a> -->
+          <a class="nav-link" href="logout.php">Logout</a>
+          
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -62,7 +63,7 @@
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="..." alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Logged in as <?php dispay_message() ?> </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.
             </p>

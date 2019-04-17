@@ -212,7 +212,7 @@ $row = fetch_array($result);
   $db_password = $row['password'];
     if(md5($password) == $db_password){
         // return true;
-     redirect("recover.php");
+     redirect("post_details.php");
         // echo $email;
         // echo $password;
 

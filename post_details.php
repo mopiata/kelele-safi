@@ -18,7 +18,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">KELELE SAFI</a>
+    <a class="navbar-brand" href="#"><img id="logo" src="img/logo.png" alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,132 +29,108 @@
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-        <!-- <a href="logout.php" class="btn btn-primary">Logout</a> -->
-
-          <a class="nav-link" href="logout.php">Logout</a>
-          
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <div class="logout-link">
+        <a class="nav-link" href="logout.php"><strong>Logout</strong></a>
+      </div> 
     </div>
   </nav>
   <div class="row">
     <div class="col-md-3 col-sm-12 cols">
       <div class="container">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/user.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Logged in as <?php dispay_message() ?> </h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.
-            </p>
-
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title"><strong>Logged in as <?php dispay_message() ?> </strong></h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-6 col-sm-12 cols">
-      <div class="card text-center">
-        <div class="card-header">
-          Featured
+      <div class="container">
+        <div class="card text-center">
+          <div class="card-header">
+            <img id="hey" src="img/hey.jpg" alt="Hey">
 
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text">.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-          <!-- ========================================== -->
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 col-md-offset-3 post">
-                <h2>Post title</h2>
-                <p>KPLC Tockens not loading</p>
-              </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">.</p>
+            
+            <!-- ========================================== -->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-md-offset-3 post">
+                  <h2>Post title</h2>
+                  <p>KPLC Tockens not loading</p>
+                </div>
 
-              <!-- comments section -->
-              <div class="col-md-12 col-md-offset-3 comments-section">
-                <!-- comment form -->
-                <form class="clearfix" action="functions.php" method="post" id="comment_form">
-                  <h4>Post a comment:</h4>
-                  <textarea name="comment_text" id="comment_text" class="form-control" cols="30" rows="3"></textarea>
-                  <button class="btn btn-primary btn-sm pull-right" id="submit_comment">Submit comment</button>
-                </form>
+                <!-- comments section -->
+                <div class="col-md-12 col-md-offset-3 comments-section">
+                  <!-- comment form -->
+                  <form class="clearfix" action="functions.php" method="post" id="comment_form">
+                    <h4>Post a comment:</h4>
+                    <textarea name="comment_text" id="comment_text" class="form-control" cols="30" rows="3"></textarea>
+                    <button class="btn btn-primary btn-sm pull-right" id="submit_comment">Submit comment</button>
+                  </form>
 
-                <!-- Display total number of comments on this post  -->
-                <h2><span id="comments_count">0</span> Comment(s)</h2>
-                <hr>
-                <!-- comments wrapper -->
-                <div id="comments-wrapper">
-                  <div class="comment clearfix">
-                    <img src="profile.png" alt="" class="profile_pic">
-                    <div class="comment-details">
-                      <span class="comment-name">Melvine</span>
-                      <span class="comment-date">Apr 24, 2018</span>
-                      <p>This is the first reply to this post on this website.</p>
-                      <a class="reply-btn" href="#">reply</a>
-                    </div>
-                    <div>
-                      <!-- reply -->
-                      <div class="comment reply clearfix">
-                        <img src="profile.png" alt="" class="profile_pic">
-                        <div class="comment-details">
-                          <span class="comment-name">Awa</span>
-                          <span class="comment-date">Apr 24, 2018</span>
-                          <p>Hey, why are you the first to comment on this post?</p>
-                          <a class="reply-btn" href="#">reply</a>
+                  <!-- Display total number of comments on this post  -->
+                  <h2><span id="comments_count">0</span> Comment(s)</h2>
+                  <hr>
+                  <!-- comments wrapper -->
+                  <div id="comments-wrapper">
+                    <div class="comment clearfix">
+                      <img src="profile.png" alt="" class="profile_pic">
+                      <div class="comment-details">
+                        <span class="comment-name">Melvine</span>
+                        <span class="comment-date">Apr 24, 2018</span>
+                        <p>This is the first reply to this post on this website.</p>
+                        <a class="reply-btn" href="#">reply</a>
+                      </div>
+                      <div>
+                        <!-- reply -->
+                        <div class="comment reply clearfix">
+                          <img src="profile.png" alt="" class="profile_pic">
+                          <div class="comment-details">
+                            <span class="comment-name">Awa</span>
+                            <span class="comment-date">Apr 24, 2018</span>
+                            <p>Hey, why are you the first to comment on this post?</p>
+                            <a class="reply-btn" href="#">reply</a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- // comments wrapper -->
                 </div>
-                <!-- // comments wrapper -->
+                <!-- // comments section -->
               </div>
-              <!-- // comments section -->
             </div>
+
+            <!-- ========================================== -->
+
           </div>
-
-          <!-- ========================================== -->
-
-        </div>
-        <div class="card-footer text-muted">
-          2 days ago
+          <div class="card-footer text-muted">
+            Thanks for your input.
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-3 col-sm-12 cols">
+      
+      <div class="container">
+        <h2>Welcome to Kelele Safi</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      </div>
 
     </div>
   </div>
   <div class="footer">
-    Blah Blah Blah
+    
   </div>
 
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -3,6 +3,10 @@ html, body{
   max-width: 100%;
   overflow-x: hidden;
   color: #0c4e7b;
+  font-family: 'Slabo 27px', serif;
+}
+h1,h2,h3,h4,h5,h6,a{
+  font-family: 'Cinzel', serif;
 }
 .jumbotron{
   background-color: transparent;
@@ -53,6 +57,27 @@ html, body{
   display: none;
 }
 .cols{
-  border:solid 1px #ffcb0c;
-  
+  /* border:solid 1px #ffcb0c; */
+}
+#logo{
+  height:100px;
+}
+.logout-link{
+  float:left;
+}
+.logout-link .nav-link{
+  color:#0c4e7b;
+}
+.nav-link{
+  font-size: 20px;
+}
+#navbarSupportedContent{
+  padding-right:15px;
+  padding-left:80px;
+}
+.container{
+  padding-top:10px;
+}
+#hey{
+  max-width: 100%;
 }

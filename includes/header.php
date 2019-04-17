@@ -11,6 +11,7 @@
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/underscore.js"></script>
   <script src="js/scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Slabo+27px" rel="stylesheet">  
   <title>Kelele Safi</title>
 </head>
 <body>

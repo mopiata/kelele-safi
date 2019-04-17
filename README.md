@@ -30,12 +30,12 @@ The app is to be hosted on Heroku and the database hosted on Heroku's ClearDB.
 
 ## Support and contact details
 
-Contact us on github 
-Eric on <https://github.com/ewanyama2019> 
-Margaret on <https://github.com/mopiata> 
-Michael on <https://github.com/modongo>
+Contact us 
+#### Eric on <https://github.com/ewanyama2019> 
+#### Margaret on <https://github.com/mopiata> 
+#### Michael on <https://github.com/modongo>
 
-### license
+### License
 
 https://opensource.org/licenses/MIT
 

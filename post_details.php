@@ -1,22 +1,4 @@
 <?php include("includes/header.php")?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" /> -->
-  <script src="js/jquery-3.3.1.js"></script>
-  <script src="js/underscore.js"></script>
-   <script src="js/scripts.js"></script>
-  <title>Kelele Safi</title>
-</head>
-
-<body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">KELELE SAFI</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -51,17 +33,17 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
   </nav>
   <div class="row">
     <div class="col-md-3 col-sm-12 cols">
       <div class="container">
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" src="img/user.png" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Logged in as <?php dispay_message() ?> </h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -69,16 +51,7 @@
             </p>
 
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
+         </div>
       </div>
     </div>
     <div class="col-md-6 col-sm-12 cols">
@@ -102,26 +75,37 @@
               <!-- comments section -->
               <div class="col-md-12 col-md-offset-3 comments-section">
                 <!-- comment form -->
-                <form class="clearfix" action="functions.php" method="post" id="comment_form">
+                <!-- <form class="clearfix" action="functions.php" method="post" id="comment_form">
                   <h4>Post a comment:</h4>
                   <textarea name="comment_text" id="comment_text" class="form-control" cols="30" rows="3"></textarea>
                   <button class="btn btn-primary btn-sm pull-right" id="submit_comment">Submit comment</button>
-                </form>
+                </form> -->
 
                 <!-- Display total number of comments on this post  -->
                 <h2><span id="comments_count">0</span> Comment(s)</h2>
                 <hr>
                 <!-- comments wrapper -->
-                <div id="comments-wrapper">
-                  <div class="comment clearfix">
-                    <img src="profile.png" alt="" class="profile_pic">
-                    <div class="comment-details">
-                      <span class="comment-name">Melvine</span>
-                      <span class="comment-date">Apr 24, 2018</span>
-                      <p>This is the first reply to this post on this website.</p>
-                      <a class="reply-btn" href="#">reply</a>
-                    </div>
-                    <div>
+<div class="panel panel-default">
+<div class="panel-heading">Submit Your Comments</div>
+  <div class="panel-body">
+  	<form method="post" action="post_comments.php">
+  	  <div class="form-group">
+	    <label for="exampleInputEmail1">Name</label>
+	    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Name">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Email address</label>
+	    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Subject</label>
+	    <textarea name="subject" class="form-control" rows="3"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+  <p><?php getComments() ?></p>
+  </div>
+</div>
                       <!-- reply -->
                       <div class="comment reply clearfix">
                         <img src="profile.png" alt="" class="profile_pic">
@@ -136,25 +120,33 @@
                   </div>
                 </div>
                 <!-- // comments wrapper -->
+				<div class="card-footer text-muted">
+            Thanks for your input.
+          </div>
               </div>
               <!-- // comments section -->
             </div>
           </div>
 
-          <!-- ========================================== -->
+<div class="col-md-3 col-sm-12 cols">
+	 <div class="container">
+        <h2>Welcome to Kelele Safi</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
+      </div>
+
+    </div> 	
         </div>
         <div class="card-footer text-muted">
-          2 days ago
+          
         </div>
       </div>
     </div>
-    <div class="col-md-3 col-sm-12 cols">
-
-    </div>
+    
   </div>
   <div class="footer">
-    Blah Blah Blah
   </div>
 
   <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

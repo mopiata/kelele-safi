@@ -6,7 +6,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 site-purpose">
       <div class="jumbotron">
         <nav class="navbar navbar-expand-lg bg-transparent nav-login">
-          <a class="navbar-brand" href="#">KELELE SAFI</a>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo"></a>
         </nav>
         
         <br><br>

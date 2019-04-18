@@ -235,5 +235,49 @@ $row = fetch_array($result);
 }
 }
 
+/******************Insert comments*******************/
+function validate_insert_comments(){
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        // $first_name      = clean($_POST['first_name']); 
+        $name        =   clean($_POST['name']);
+        $email       =   clean($_POST['email']);
+        $subject     =   clean($_POST['subject']);
+
+        insert_comments($name,$email,$subject);
+
+        }
+
+}
+
+function insert_comments($name,$email,$subject){
+    $name            =   escape($name);         
+    $email           =   escape($email);
+    $subject         =   escape($subject);
+
+    // $sql = "INSERT INTO users".
+    //      "(first_name, surname, email,password,GENDER, username, validation_code,active)".
+    //      "VALUES"."('$first_name','$surname','$email','$password','$GENDER','$username','$validation_code',0)";
+
+    $sql = "INSERT INTO comments". 
+    "(name, email, subject, status)". 
+    "VALUES"."('$name', '$email', '$subject', 'draft')";
+    $result = query($sql);
+    confirm($result);
+    redirect("post_details.php");
+    // echo $name;
+    // echo $email;
+
+}
+function getComments(){
+    $sql = "SELECT * FROM comments";
+    $result = query($sql);
+    $row =  confirm($result);
+
+    echo $row['subject'];
+    }
+
+
+
+
 
 ?>
